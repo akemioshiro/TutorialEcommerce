@@ -16,6 +16,11 @@ namespace TutorialEcommerce.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // faz com que seja removidas todas as engines e incluida so a de mvc
+            // diminui leitura em disco
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new RazorViewEngine());
         }
     }
 }

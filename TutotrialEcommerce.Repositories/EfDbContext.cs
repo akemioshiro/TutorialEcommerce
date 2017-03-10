@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,7 @@ namespace TutotrialEcommerce.Repositories
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            // cria tabelas no plural
+            // remove tabelas no plural
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             // tirando as duas propriedades evita que sejam removidos os relacionamentos em cascata
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
@@ -35,5 +36,6 @@ namespace TutotrialEcommerce.Repositories
 
             modelBuilder.Configurations.Add(new UsuarioConfigurations());
         }
+
     }
 }

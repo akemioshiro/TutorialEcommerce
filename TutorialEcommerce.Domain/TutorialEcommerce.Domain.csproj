@@ -45,6 +45,7 @@
     <Compile Include="Entities\EntityBase.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Enuns\Uf.cs" />
+    <Compile Include="IApp\IUsuarioApp.cs" />
     <Compile Include="IRepositories\IUsuarioRepository.cs" />
     <Compile Include="IRepositories\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
